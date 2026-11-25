@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flight Forecast | Analytics</title>
+
+    <link
+        href="{{ url_for('static', filename='css/tailwind.css') }}"
+        rel="stylesheet"
+    >
+</head>
+
+<body class="bg-slate-100 text-slate-800">
+
+    <div class="flex min-h-screen">
+
+        <!-- Sidebar -->
+        <aside class="w-64 bg-slate-900 text-white p-6">
+
+            <h1 class="text-xl font-bold mb-10">
+                Flight Forecast
+            </h1>
+
+            <nav class="space-y-3">
+
+                <a href="/"
+                   class="block bg-slate-700 rounded-lg p-3">
+                    Dashboard
+                </a>
+
+                <a href="#forecast"
+                   class="block text-slate-300 p-3 hover:bg-slate-800 rounded-lg">
+                    Forecasts
+                </a>
+
+                <a href="#pipeline"
+                   class="block text-slate-300 p-3 hover:bg-slate-800 rounded-lg">
+                    Pipeline Status
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+
+            <!-- Header -->
+            <header class="mb-8">
+
+                <h2 class="text-3xl font-bold">
+                    Flight Analytics Dashboard
+                </h2>
+
+                <p class="text-slate-500 mt-2">
+                    Historical flight performance and delay forecasting
+                </p>
+
+            </header>
+
+
+            <!-- KPI Cards -->
+            <section class="grid grid-cols-3 gap-6 mb-8">
+
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <p class="text-slate-500 text-sm">
+                        Total Flights
+                    </p>
+
+                    <h3 class="text-3xl font-bold mt-2">
+                        --
+                    </h3>
+                </div>
+
+
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <p class="text-slate-500 text-sm">
+                        Flights Delayed
+                    </p>
+
+                    <h3 class="text-3xl font-bold mt-2">
+                        --
+                    </h3>
+                </div>
+
+
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <p class="text-slate-500 text-sm">
+                        Average Delay
+                    </p>
+
+                    <h3 class="text-3xl font-bold mt-2">
+                        --
+                    </h3>
+                </div>
+
+            </section>
+
+
+            <!-- Forecast Section -->
+            <section id="forecast"
+                     class="bg-white rounded-xl shadow-sm p-6 mb-8">
+
+                <h3 class="text-xl font-semibold mb-2">
+                    Flight Delay Forecast
+                </h3>
+
+                <p class="text-slate-500 text-sm">
+                    Historical performance and predicted delays
+                </p>
+
+                <div class="h-72 flex items-center justify-center
+                            bg-slate-50 rounded-lg mt-6">
+
+                    <p class="text-slate-400">
+                        Forecast visualization coming soon
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Pipeline Status -->
+            <section id="pipeline"
+                     class="bg-white rounded-xl shadow-sm p-6">
+
+                <h3 class="text-xl font-semibold mb-4">
+                    Pipeline Status
+                </h3>
+
+                <div class="flex justify-between border-b py-4">
+                    <span>Files Received</span>
+                    <span class="text-slate-500">--</span>
+                </div>
+
+                <div class="flex justify-between border-b py-4">
+                    <span>Files Processing</span>
+                    <span class="text-slate-500">--</span>
+                </div>
+
+                <div class="flex justify-between py-4">
+                    <span>Files Loaded</span>
+                    <span class="text-slate-500">--</span>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
